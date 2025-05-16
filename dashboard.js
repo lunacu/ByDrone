@@ -6,7 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
       card.addEventListener("click", function () {
         const cardTitle = this.querySelector("h3").textContent
         console.log(`Clicked on ${cardTitle}`)
-        alert(`Has seleccionado: ${cardTitle}`)
+  
+        // Check if the card has a data-page attribute
+        const targetPage = this.getAttribute("data-page")
+        if (targetPage) {
+          window.location.href = targetPage
+        } else {
+          alert(`Has seleccionado: ${cardTitle}`)
+        }
       })
     })
   

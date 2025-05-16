@@ -1,72 +1,76 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
     min-height: 100vh;
     background-color: #00b3a6;
     position: relative;
-    overflow: hidden;
-}
-
-/* Header styles */
-header {
+    overflow-y: auto;
+  }
+  
+  /* Header styles */
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #333;
     color: white;
-}
-
-.logo-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.drone-icon {
+  }
+  
+  .drone-icon {
     width: 40px;
     height: 40px;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 2rem;
     font-weight: bold;
     color: white;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
     gap: 1rem;
-}
-
-.nav-btn {
+  }
+  
+  .nav-btn {
     background: none;
     border: none;
     color: white;
     font-size: 1rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
-}
-
-/* Hexagon background */
-.hexagon-background {
-    position: absolute;
+  }
+  
+  /* Hexagon background */
+  .hexagon-background {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hexagon-pattern.svg');
+    background-image: url("hexagon-pattern.svg");
     background-size: 200px;
     z-index: -1;
-}
-
-/* Login container */
-.login-container {
+  }
+  
+  /* Login container */
+  .login-container {
     position: relative;
     max-width: 400px;
     margin: 5rem auto;
@@ -74,33 +78,33 @@ nav {
     background-color: rgba(0, 200, 180, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
+  }
+  
+  h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: #333;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     margin-bottom: 1.5rem;
-}
-
-label {
+  }
+  
+  label {
     display: block;
     margin-bottom: 0.5rem;
     color: #333;
-}
-
-input {
+  }
+  
+  input {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-}
-
-.login-btn {
+  }
+  
+  .login-btn {
     width: 100%;
     padding: 0.8rem;
     background-color: #ff8c00;
@@ -110,24 +114,47 @@ input {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.login-btn:hover {
+  }
+  
+  .login-btn:hover {
     background-color: #e67e00;
-}
-
-.register-link {
+  }
+  
+  .register-link {
     text-align: center;
     margin-top: 1.5rem;
     color: #333;
-}
-
-.register-link a {
+  }
+  
+  .register-link a {
     color: #333;
     text-decoration: underline;
     cursor: pointer;
-}
-
-.register-link a:hover {
+  }
+  
+  .register-link a:hover {
     color: #222;
-}
+  }
+  
+  /* User profile icon */
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .user-icon i {
+    color: #333;
+    font-size: 1.2rem;
+  }
+  

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bydrone - Estadísticas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Chart.js desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="drone-icon.svg" alt="Drone Icon" class="drone-icon">
+            <h1>Bydrone</h1>
+        </div>
+        <div class="user-profile">
+            <div class="user-icon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="statistics-main">
+        <div class="hexagon-background"></div>
+        
+        <div class="statistics-container">
+            <div class="header-with-back">
+                <button class="back-button" onclick="window.location.href='dashboard.html'">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </button>
+                <h2>Estadísticas</h2>
+            </div>
+            
+            <div class="stats-summary">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Vuelos</h3>
+                        <p class="stat-value">247</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Hallazgos</h3>
+                        <p class="stat-value">183</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Modelo IA</h3>
+                        <p class="stat-value">DroneVision v2.4</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Tiempo de Vuelo</h3>
+                        <p class="stat-value">342h 18m</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Vuelos por Mes</h3>
+                    <canvas id="flightsChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Hallazgos por Categoría</h3>
+                    <canvas id="findingsChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Rendimiento del Modelo IA</h3>
+                    <canvas id="aiPerformanceChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Distribución de Tiempo de Vuelo</h3>
+                    <canvas id="flightTimeChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="ai-model-info">
+                <h3>Información del Modelo de IA</h3>
+                <div class="ai-model-details">
+                    <div class="ai-detail">
+                        <span class="detail-label">Nombre:</span>
+                        <span class="detail-value">DroneVision v2.4</span>
+                    </div>
+                    <div class="ai-detail">
+                        <span class="detail-label">Precisión:</span>
+                        <span class="detail-value">94.7%</span>
+                    </div>
+                    <div class="ai-detail">
+                        <span class="detail-label">Última actualización:</span>
+                        <span class="detail-value">12/04/2025</span>
+                    </div>
+                    <div class="ai-detail">
+                        <span class="detail-label">Tiempo de procesamiento:</span>
+                        <span class="detail-value">0.8s por imagen</span>
+                    </div>
+                </div>
+                <div class="ai-model-progress">
+                    <h4>Rendimiento por Categoría</h4>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Estructuras</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 96%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Vegetación</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Anomalías</span>
+                            <span>89%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 89%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Terreno</span>
+                            <span>97%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 97%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script de estadísticas -->
+    <script src="statistics.js"></script>
+</body>
+</html>
